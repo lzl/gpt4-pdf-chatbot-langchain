@@ -203,8 +203,8 @@ export default function Home() {
                         : styles.usermessage;
                   }
                   return (
-                    <>
-                      <div key={`chatMessage-${index}`} className={className}>
+                    <div key={`chatMessage-${index}`}>
+                      <div className={className}>
                         {icon}
                         <div className={styles.markdownanswer}>
                           <ReactMarkdown linkTarget="_blank">
@@ -239,7 +239,7 @@ export default function Home() {
                           </Accordion>
                         </div>
                       )}
-                    </>
+                    </div>
                   );
                 })}
                 {sourceDocs.length > 0 && (
