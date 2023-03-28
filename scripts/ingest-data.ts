@@ -19,8 +19,8 @@ export const run = async () => {
 
     /* Split text into chunks */
     const textSplitter = new RecursiveCharacterTextSplitter({
-      chunkSize: 2000,
-      chunkOverlap: 200,
+      chunkSize: 100,
+      chunkOverlap: 10,
     });
 
     const docs = await textSplitter.splitDocuments(rawDocs);
